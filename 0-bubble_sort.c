@@ -6,7 +6,6 @@
  * @array: The list to be sorted
  * @size: the array size
  */
-
 void bubble_sort(int *array, size_t size)
 {
 	int i;
