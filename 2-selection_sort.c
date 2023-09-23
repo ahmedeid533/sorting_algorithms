@@ -8,9 +8,10 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	int i;
+	size_t i;
 	int smallest_index;
-	int j;
+	size_t j;
+	int temp;
 
 	for (i = 0; i < size; i++)
 	{
@@ -23,7 +24,9 @@ void selection_sort(int *array, size_t size)
 			}
 			if (i != smallest_index)
 			{
-				swap(&array[i], &array[smallest_index]);
+				temp = array[i];
+				array[i] = array[smallest_index];
+				array[smallest_index] = temp;
 				print_array(array, size);
 			}
 		}
