@@ -25,25 +25,21 @@ void insertion_sort_list(listint_t **list)
         {
             tmp1 = loop_check->prev;
             tmp2 = loop_check;
+
+            if (tmp2->next != NULL)
+                tmp2->next->prev = tmp1;
             tmp1->next = tmp2->next;
             tmp2->prev = tmp1->prev;
             tmp1->prev = tmp2;
             tmp2->next = tmp1;
 
-            if (tmp1->prev != NULL)
-            {
-                tmp1->prev->next = tmp2;
-            }
+            if (tmp2->prev != NULL)
+                tmp2->prev->next = tmp2;
             else
-            {
                 *list = tmp2;
-            }
-            if (tmp1->next != NULL)
-            {
-                tmp1->next->prev = tmp1;
-            }
+
+            loop_check = tmp2;
             print_list(*list);
-            loop_check = tmp1;
         }
         loop_node = loop_node->next;
     }
