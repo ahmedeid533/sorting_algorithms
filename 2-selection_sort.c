@@ -21,7 +21,11 @@ void selection_sort(int *array, size_t size)
 			{
 				smallest_index = j;
 			}
-			swap(&array[i], &array[smallest_index]);
+			if (i != j)
+			{
+				swap(&array[i], &array[smallest_index]);
+				print_array(array, size);
+			}
 		}
 	}
 }
