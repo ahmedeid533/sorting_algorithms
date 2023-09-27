@@ -32,12 +32,14 @@ int partition(int *array, size_t low, size_t high, size_t size)
 		{
 			i++;
 			swap(&array[i], &array[j]);
-			print_array(array, size);
+			if(i != j)
+				print_array(array, size);
 		}
 	}
 
 	swap(&array[i + 1], &array[high]);
-	print_array(array, size);
+	if (i + 1 != high)
+		print_array(array, size);
 	return (i + 1);
 }
 
