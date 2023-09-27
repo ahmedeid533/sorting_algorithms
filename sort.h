@@ -5,7 +5,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stddef.h>
-#include <vcruntime.h>
 
 /**
  * struct listint_s - Doubly linked list node
