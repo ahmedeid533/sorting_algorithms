@@ -18,7 +18,7 @@ void swap(int *a, int *b)
  * @array: The array to be sorted.
  * @low: The low index of the partition.
  * @high: The high index of the partition.
- *
+ * @size: to print array
  * Return: The final index of the pivot element.
  */
 int partition(int *array, size_t low, size_t high, size_t size)
@@ -47,6 +47,7 @@ int partition(int *array, size_t low, size_t high, size_t size)
  * @array: The array to be sorted.
  * @low: The low index of the partition.
  * @high: The high index of the partition.
+ * @size: to print array
  */
 void quick_sort_recursive(int *array, int low, int high, size_t size)
 {
